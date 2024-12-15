@@ -1,0 +1,8 @@
+Header - nav-bar
+
+About me
+Projects
+Skills
+Contact
+
+make it responsive to all screen sizes!!
