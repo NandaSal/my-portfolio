@@ -1,18 +1,144 @@
 * {
-  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
 }
 
+:root {
+  --main-color: #0702BA;
+  --secondary-color: #A0DFD3;
+  --title-color: #200038;
+  --accent-color: #200038;
+  --text-color: #424242;
+  --tertiary-color: #371BC3;
+}
 
-h1, h2 {
-  color: SeaGreen;
+body {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+.off-screen-menu {
+  background-color: var(--tertiary-color);
+  height: 100vh;
+  width: 100%;
+  max-width: 450px;
+  position: fixed;
+  top: 0;
+  right: -450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  transition: .3s ease;
+}
+
+.off-screen-menu.active {
+  right: 0;
+}
+
+h1, h2, h3 {
+  color: var(--title-color);
+  margin: 2rem 0.8rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--tertiary-color);
+  width: 100%;
+  height: 6rem;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+.title {
+  color: var(--title-color);
+  font-family: "JetBrains Mono", serif;
+  font-size: 1.7rem;
+}
+
+.simplebio {
+  color: var(--main-color);
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+  padding 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: var(--main-color);
+}
+
+.ham-menu {
+  height: 50px;
+  width: 50px;
+  margin-left: auto;
+  position: relative;
+}
+
+.ham-menu span {
+  height: 5px;
+  width: 100%;
+  background-color: var(--secondary-color);
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: .3s ease;
+}
+
+.ham-menu span:nth-child(1) {
+  top: 25%;
+}
+.ham-menu span:nth-child(3) {
+  top: 75%;
+}
+
+.ham-menu.active span:nth-child(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.ham-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+.ham-menu.active span:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, 50%) rotate(-45deg);
+}
+
+.navbar-link {
+  color: var(--accent-color);
+  font-family: "Jersey 15", serif;
+  font-size: 1.3rem;
+}
+
+.navbar-link:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+.welcome {
+  margin-top: 6rem;
+  color: var(--main-color);
+}
+
+a, p, .title, .contact-items, .about-list {
+  margin-left: 1rem;
 }
 
 p, 
-li {
+.contact-items {
   font-size: 18px;
   list-style-type: none;
 }
-
 
 a {
   text-decoration: none;
@@ -20,5 +146,5 @@ a {
 
 .strong {
   font-weight: bold;
-  color: seagreen;
+  color: var(--main-color);
 }
