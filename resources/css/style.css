@@ -1,3 +1,4 @@
+/* #region global */
 * {
   margin: 0;
   padding: 0;
@@ -7,21 +8,36 @@
 }
 
 :root {
-  --main-color: #0702BA;
-  --secondary-color: #A0DFD3;
-  --title-color: #200038;
-  --accent-color: #200038;
-  --text-color: #424242;
-  --tertiary-color: #371BC3;
+  --main-color: rgb(34, 37, 49);
+  --secondary-color: #6F86FF;
+  --header-color: #200038;
+  --text-color: #000;
+  --extra-color: white;
 }
 
 body {
-  background-color: var(--secondary-color);
-  color: var(--text-color);
+  background-color: var(--main-color);
+  font-family: 'JetBrains Mono', sans-serif;
+}
+/* #endregion */
+
+/* #region nav + header + menu */
+a {
+  color: var(--secondary-color);
 }
 
+a:visited {
+  color: var(--secondary-color);
+}
+
+a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+/* off-screen-menu */
 .off-screen-menu {
-  background-color: var(--tertiary-color);
+  background-color: var(--header-color);
   height: 100vh;
   width: 100%;
   max-width: 450px;
@@ -30,8 +46,9 @@ body {
   right: -450px;
   display: flex;
   flex-direction: column;
+  align-items: center;    
   justify-content: center;
-  align-items: center;
+  text-align: center;
   font-size: 3rem;
   transition: .3s ease;
 }
@@ -40,45 +57,23 @@ body {
   right: 0;
 }
 
-h1, h2, h3 {
-  color: var(--title-color);
-  margin: 2rem 0.8rem;
+/* nav */
+nav {
+  padding: 1rem;
+  display: flex;
+  background-color: var(--header-color);
+  align-items: center;
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--tertiary-color);
-  width: 100%;
-  height: 6rem;
   position: fixed;
-  top: 0;
-  z-index: 1;
+  width: 100%;
 }
 
-.title {
-  color: var(--title-color);
-  font-family: "JetBrains Mono", serif;
-  font-size: 1.7rem;
-}
-
-.simplebio {
-  color: var(--main-color);
-}
-
-nav {
-  display: flex;
-  gap: 1rem;
-  padding 1rem;
-  text-transform: uppercase;
-  font-weight: bold;
-  background-color: var(--main-color);
-}
-
+/* ham menu */
 .ham-menu {
   height: 50px;
-  width: 50px;
+  width: 40px;
   margin-left: auto;
   position: relative;
 }
@@ -89,8 +84,8 @@ nav {
   background-color: var(--secondary-color);
   border-radius: 25px;
   position: absolute;
-  top: 50%;
   left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
   transition: .3s ease;
 }
@@ -98,53 +93,223 @@ nav {
 .ham-menu span:nth-child(1) {
   top: 25%;
 }
+
 .ham-menu span:nth-child(3) {
   top: 75%;
+}
+
+.ham-menu.active span {
+  background-color: var(--secondary-color);
 }
 
 .ham-menu.active span:nth-child(1) {
   top: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
+
 }
 .ham-menu.active span:nth-child(2) {
   opacity: 0;
 }
+
 .ham-menu.active span:nth-child(3) {
   top: 50%;
-  transform: translate(-50%, 50%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-.navbar-link {
-  color: var(--accent-color);
-  font-family: "Jersey 15", serif;
-  font-size: 1.3rem;
-}
-
-.navbar-link:hover {
+.title-menu {
+  font-size: 3rem;
   color: var(--secondary-color);
-  text-decoration: underline;
+}
+/* #endregion */
+
+/* #region welcome section */
+#welcome-section {
+  height: 100vh;
+}
+
+.welcome, .simplebio {
+  padding: 1rem;
+  color: var(--text-color);
+  text-align: center;
 }
 
 .welcome {
-  margin-top: 6rem;
+  padding-top: 8rem;
+}
+
+.simplebio {
+  margin-bottom: 7.1rem;
+}
+
+/* #endregion */
+
+/* #region projects */
+.projects {
+  scroll-margin-top: 70px;
+  text-align: center;
+}
+
+.projects-title, .projects-text {
+  padding: 1rem;
+}
+
+.projects-title, .about-title, .contact-title {
+  color: var(--secondary-color);
+  background-color: var(--header-color);
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+.projects-text {
+  color: var(--text-color); 
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.project-name {
+  margin: 3rem 1rem;
+  font-size: 1.3rem;
+}
+
+.project-name:hover {
+  text-decoration: underline;
+  color: var(--extra-color);
+
+}
+
+.project-img {
+  width: 22rem;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  padding-top: 1.5rem;
+}
+/* #endregion */
+
+/* #region about */
+.about {
+  scroll-margin-top: 70px;
+}
+
+.about-img {
+  width: 30vh;
+  display: block;
+  margin: 0 auto;
+  margin-top: 2rem;
+  border-radius: 50%;
+}
+
+.about-bio {
+  margin: 2rem 3rem;
+  text-align: justify;
+}
+
+.about-bio:first-of-type {
+  margin-top: 3rem;
+}
+
+.about-bio:last-of-type {
+  margin-bottom: 5rem;
+}
+
+.about-subtitle {
+  margin: 3rem;
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+.icons-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.5rem;
+  margin: 1rem;
+  margin-bottom: 3rem;
+}
+/* #endregion */
+
+/* #region contact */
+.contact {
+  scroll-margin-top: 70px;
+}
+
+.contact-list {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-around;
+  margin: 1rem;
+  flex-wrap: wrap;
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  margin: 3rem 0;
+}
+
+.contact-icon:hover {
   color: var(--main-color);
 }
 
-a, p, .title, .contact-items, .about-list {
-  margin-left: 1rem;
+.email {
+  font-size: 1rem;
+  text-transform: lowercase;
+  color: var(--secondary-color);
 }
 
-p, 
-.contact-items {
-  font-size: 18px;
-  list-style-type: none;
+i {
+  color: var(--secondary-color);
+}
+/* #endregion */
+
+/* #region footer */
+.footer {
+  background-color: var(--header-color);
+  width: 100%;
+  height: 5em;
 }
 
-a {
-  text-decoration: none;
+.footer-text {
+  padding: 1.2rem 0.5rem;
+}
+/* #endregion */
+
+/* #region media querys */
+@media screen and (max-width: 546px) {
+  .title-menu {
+    font-size: 2rem;
+  }
 }
 
-.strong {
-  font-weight: bold;
-  color: var(--main-color);
+@media screen and (max-width: 398px) {
+  .title-menu {
+    font-size: 1.5rem;
+  }
 }
+
+@media screen and (max-width: 316px) {
+  .title-menu {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 267px) {
+  .title-menu {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .off-screen-menu {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 385px), 
+       screen and (orientation: landscape) {
+  .welcome, .simplebio {
+    text-align: left;
+  }
+}
+/* #endregion */

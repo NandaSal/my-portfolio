@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fernanda Salgado</title>
-  <link rel="stylesheet" href="/resources/css/style2.css" type="text/css">
+  <link rel="stylesheet" href="/resources/css/style.css" type="text/css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
@@ -42,25 +42,25 @@
     <p class="projects-text">Here are some of the projects that I have worked on so far:</p>
 
     <article class="project-tile">
-      <a href="https://github.com/NandaSal/tea-cozy" class="project-name">Tea Cozy - Github link</a>
+      <a href="https://github.com/NandaSal/tea-cozy" class="project-name" target="_blank">Tea Cozy - Github link</a>
       <img src="/resources/images/teacozy-ss.png" class="project-img" alt="screenshot of project">
       <p class="projects-text">Project for codecademy to exercise the use of flexbox by creating a fictional tea shop website with the design spec and images provided.</p>
     </article>
 
     <article class="project-tile">
-      <a href="https://github.com/NandaSal/bunnyhop" class="project-name">Bunnyhop - Github link</a>
+      <a href="https://github.com/NandaSal/bunnyhop" class="project-name" target="_blank">Bunnyhop - Github link</a>
       <img src="/resources/images/bunnyhop-ss.png" class="project-img" alt="screenshot of project">
       <p class="projects-text">Project for fake business website using flexbox.</p>
     </article>
 
     <article class="project-tile">
-      <a href="https://github.com/NandaSal/responsive-wicked-project" class="project-name">Responsive Wicked Project - Github link</a>
+      <a href="https://github.com/NandaSal/responsive-wicked-project" target="_blank" class="project-name">Responsive Wicked Project - Github link</a>
       <img src="/resources/images/mmss-ss.png" class="project-img" alt="screenshot of project">
       <p class="projects-text">Simple project based on the 2025 movie Wicked, a fake website about Madame Morrible's Sorcery Seminar.</p>
     </article>
 
     <article class="project-tile">
-      <a href="https://github.com/NandaSal/landing-page" class="project-name">Toothpaste - Github link</a>
+      <a href="https://github.com/NandaSal/landing-page" target="_blank" class="project-name">Toothpaste - Github link</a>
       <img src="/resources/images/toothpaste-ss.png" class="project-img">
       <p class="projects-text">Project made for codecademy, website of a fictional product: toothpaste.</p>
     </article>
@@ -75,17 +75,41 @@
   <!--About Section-->
   <section class="about" id="about">
     <h3 class="about-title">About Me</h3>
-    <p class="about-text">Born in June 11th 1997, I graduated in psychology but decided I wanted something different for my career. I started taking learning to code through apps, but quickly decided I quite enjoyed it, so I started learning more and more through free and paid courses.</p>
-    <ul class="about-list">
-      <li class="list-item">HTML, CSS, & JavaScript</li>
-      <li class="list-item">Responsive Design</li>
-      <li class="list-item">Git & GitHub</li>
-      <li class="list-item">Front End Development</li>
-      <li class="list-item">Node</li>
-      <li class="list-item">NPM</li>
+    <img al="Fernanda Salgado" class="about-img" src="/resources/images/bioimg.jpg">
+    <div class="bio-container">
+      <p class="about-bio">I was born in June 11th 1997 and graduated college with a bachelor's degree in psychology in 2022, but decided that I wanted to do something different with my career.</p>
+      <p class="about-bio">I started learning to code through apps, and quickly decided I quite enjoyed it, so I started learning more and more through free and paid courses, like freeCodeCamp, and codecademy.</p>
+      <p class="about-bio">I'm currently taking a front-end specialization course in college, with plans to get a post-graduate degree soon.</p>
+    </div>
+    <h4 class="about-subtitle">Skills:</h4>
+    <div class="icons-container">
+      <i class="fa-brands fa-html5 about-icons"></i>
+      <i class="fa-brands fa-css3-alt about-icons"></i>
+      <i class="fa-brands fa-square-js about-icons"></i>
+      <i class="fa-brands fa-node about-icons"></i>
+      <i class="fa-brands fa-npm about-icons"></i>
+      <i class="fa-brands fa-git about-icons"></i>
+      <i class="fa-brands fa-github about-icons"></i>
+      <i class="fa-brands fa-figma about-icons"></i>
+    </div>
+  </section>
+
+  <!--Contact Section-->
+  <section class="contact" id="contact">
+    <h3 class="contact-title">Contact Me</h3>
+    <ul class="contact-list">
+      <li class="contact-items"><a class="fa-brands fa-linkedin contact-icon" href="https://www.linkedin.com/in/fernanda-salgado-669326332/" target="_blank"></a></li>
+      <li class="contact-items"><a class="fa-brands fa-github contact-icon" id="profile-link" target="_blank" href="https://github.com/NandaSal"></a></li>
+      <li class="contact-items"><a class="fa-solid fa-envelope contact-icon" href="mailto:salgadofernanda97@gmail.com"></a></li>
     </ul>
   </section>
 
+  <!--Footer-->
+  <footer id="footer" class="footer">
+    <p class="footer-text">Copyright Fernanda Salgado, 2025</p>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/bfdc89d198.js" crossorigin="anonymous"></script>
   <script src="/resources/app.js"></script>
 </body>
 </html>
