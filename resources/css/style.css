@@ -8,7 +8,7 @@
 }
 
 :root {
-  --main-color: rgb(34, 37, 49);
+  --main-color: #545454;
   --secondary-color: #6F86FF;
   --header-color: #200038;
   --text-color: #000;
@@ -125,19 +125,22 @@ nav {
 /* #region welcome section */
 #welcome-section {
   height: 100vh;
+  background-image: url(/resources/images/banner.jpg);
 }
 
 .welcome, .simplebio {
-  padding: 1rem;
-  color: var(--text-color);
+  color: var(--secondary-color);
   text-align: center;
 }
 
 .welcome {
+  padding: 1rem;
   padding-top: 8rem;
 }
 
 .simplebio {
+  padding: 1rem;
+  padding-top: .5rem;
   margin-bottom: 7.1rem;
 }
 
@@ -249,7 +252,7 @@ nav {
 }
 
 .contact-icon:hover {
-  color: var(--main-color);
+  color: var(--header-color);
 }
 
 .email {
@@ -272,6 +275,7 @@ i {
 
 .footer-text {
   padding: 1.2rem 0.5rem;
+  color: var(--main-color);
 }
 /* #endregion */
 
