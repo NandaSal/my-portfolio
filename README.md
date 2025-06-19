@@ -1,6 +1,6 @@
 # First Portfolio Project
 
-Includes bio, projects, and links.
+Responsive Portfolio Project. Includes bio, projects, and links.
 
 # Technologies
 
