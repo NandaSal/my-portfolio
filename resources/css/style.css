@@ -156,6 +156,10 @@ nav {
   padding: 1rem;
 }
 
+.project-tile:first-of-type {
+  padding-top: 2rem;
+}
+
 .projects-title, .about-title, .contact-title {
   color: var(--secondary-color);
   background-color: var(--header-color);
