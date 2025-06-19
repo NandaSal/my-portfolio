@@ -236,6 +236,11 @@ nav {
   margin: 1rem;
   margin-bottom: 3rem;
 }
+
+h4 {
+  padding: 1rem;
+  padding-left: 3rem;
+}
 /* #endregion */
 
 /* #region contact */
