@@ -189,6 +189,11 @@ nav {
   display: block;
   padding-top: 1.5rem;
 }
+
+.extra-links, .title {
+  margin-bottom: 3em;
+}
+
 /* #endregion */
 
 /* #region about */
